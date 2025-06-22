@@ -2,6 +2,12 @@ const addItemToCart = (userCart, item) => {
   userCart.push(item);
 };
 
+const addNewItem = (userCart, name) => {
+  const index = findItemByName(userCart, name);
+  const item = userCart[index];
+  item.quantity++;
+};
+
 const findItemByName = (userCart, name) => {
   return userCart.findIndex(item => item.name === name);
 };
@@ -39,4 +45,11 @@ const displayCart = userCart => {
   console.log("");
 };
 
-export { addItemToCart, deleteItem, removeItem, calcTotalCart, displayCart };
+export {
+  addItemToCart,
+  addNewItem,
+  deleteItem,
+  removeItem,
+  calcTotalCart,
+  displayCart,
+};
