@@ -8,7 +8,16 @@ const deleteItem = (userCart, name) => {
   if (index !== -1) userCart.splice(index, 1);
 };
 
-const removeItem = (userCart, index) => {};
+const removeItem = (userCart, name) => {
+  const index = userCart.findIndex(item => item.name === name);
+  const item = userCart[index];
+
+  if (item.quantity > 1) {
+    item.quantity--;
+  } else {
+    deleteItem(userCart, name);
+  }
+};
 
 const calcTotalCart = userCart => {
   return userCart.reduce((total, item) => total + item.subtotal(), 0);
