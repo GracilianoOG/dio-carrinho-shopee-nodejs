@@ -9,3 +9,5 @@ const removeItem = (userCart, index) => {};
 const calcTotalCart = userCart => {
   return userCart.reduce((total, item) => total + item.subtotal(), 0);
 };
+
+export { addItem, deleteItem, removeItem, calcTotalCart };
