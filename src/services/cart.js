@@ -14,4 +14,16 @@ const calcTotalCart = userCart => {
   return userCart.reduce((total, item) => total + item.subtotal(), 0);
 };
 
-export { addItem, deleteItem, removeItem, calcTotalCart };
+const displayCart = userCart => {
+  console.log("Shopee Cart List:\n");
+  userCart.forEach((item, index) => {
+    console.log(
+      `${index + 1}. ${item.name}\tR$ ${item.price}\tx${
+        item.quantity
+      }\tSubtotal: R$ ${item.subtotal()}`
+    );
+  });
+  console.log("");
+};
+
+export { addItem, deleteItem, removeItem, calcTotalCart, displayCart };
