@@ -1,4 +1,4 @@
-const addItem = (userCart, item) => {
+const addItemToCart = (userCart, item) => {
   userCart.push(item);
 };
 
@@ -39,4 +39,4 @@ const displayCart = userCart => {
   console.log("");
 };
 
-export { addItem, deleteItem, removeItem, calcTotalCart, displayCart };
+export { addItemToCart, deleteItem, removeItem, calcTotalCart, displayCart };
