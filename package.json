@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Versão simplificada do carrinho da Shopee desenvolvido com JavaScript e NodeJS como parte do desafio da Digital Innovation One.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
