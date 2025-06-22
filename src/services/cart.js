@@ -2,14 +2,18 @@ const addItem = (userCart, item) => {
   userCart.push(item);
 };
 
+const findItemByName = (userCart, name) => {
+  return userCart.findIndex(item => item.name === name);
+};
+
 const deleteItem = (userCart, name) => {
-  const index = userCart.findIndex(item => item.name === name);
+  const index = findItemByName(userCart, name);
 
   if (index !== -1) userCart.splice(index, 1);
 };
 
 const removeItem = (userCart, name) => {
-  const index = userCart.findIndex(item => item.name === name);
+  const index = findItemByName(userCart, name);
   const item = userCart[index];
 
   if (item.quantity > 1) {
