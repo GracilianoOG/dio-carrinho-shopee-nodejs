@@ -37,9 +37,9 @@ const displayCart = userCart => {
   console.log("Shopee Cart List:\n");
   userCart.forEach((item, index) => {
     console.log(
-      `${index + 1}. ${item.name}\tR$ ${item.price}\tx${
+      `${index + 1}. ${item.name}\tR$ ${item.price.toFixed(2)}\tx${
         item.quantity
-      }\tSubtotal: R$ ${item.subtotal()}`
+      }\tSubtotal: R$ ${item.subtotal().toFixed(2)}`
     );
   });
   console.log("");
