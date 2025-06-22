@@ -1,4 +1,6 @@
-const addItem = userCart => {};
+const addItem = (userCart, item) => {
+  userCart.push(item);
+};
 
 const deleteItem = (userCart, name) => {};
 
